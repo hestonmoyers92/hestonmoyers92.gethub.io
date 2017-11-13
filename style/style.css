@@ -108,10 +108,9 @@ ol li
   border: 5px solid skyblue;}
 
 #logo
-{ width: 880px;
+{ width: 100%;
   position: relative;
-  height: 140px;
-  background: transparent;}
+  height: 140px;}
 
 #logo #logo_text 
 { position: absolute; 
@@ -142,7 +141,7 @@ ol li
   color: #FFF;}
 
 #menubar
-{ width: 880px;
+{ width: 100%;
   height: 46px;} 
 
 ul#menu
@@ -330,3 +329,12 @@ table tr td
 { background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;}
+
+@media screen and (max-width:640px){
+   #menubar
+{width: 100%;
+    }
+    #banner
+    {width 100%}
+}
+    
