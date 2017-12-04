@@ -6,7 +6,14 @@
   <meta name="description" content="Contact Us" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta charset="utf-8"/>
-  <link rel="stylesheet" type="text/css" href="../style/style.css" />
+  <link rel="stylesheet" type="text/css" href="../../style/style.css" />
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+    
 </head>
 
 <body>
@@ -56,6 +63,27 @@
             <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
             <p><span>Message</span><textarea class="contact textarea" rows="8" cols="50" name="your_enquiry"></textarea></p>
             <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="submit" /></p>
+              <h3>My Location</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 33.4152, lng: -111.833267};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru,
+          mapTypeId: google.maps.MapTypeId.HYBRID
+        
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map,
+        
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBbRfrzXfPF-uJ3tfW2f7N5gj4V2dX9GE&callback=initMap">
+    </script>
           </div>       
       </div>
     </div>
